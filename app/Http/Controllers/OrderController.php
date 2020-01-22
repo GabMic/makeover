@@ -35,7 +35,13 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $content = $request->order;
+        $order = Order::create(['content' => $content]);
+
+        if (request()->expectsJson()){
+            return $order;
+        }
+        return "Order Failed";
     }
 
     /**
