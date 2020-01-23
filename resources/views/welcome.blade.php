@@ -1,5 +1,10 @@
 @extends('layouts.app')
 @section('content')
+    <div class="hero">
+        <div class="container">
+            <div class="hero-body"><h1 class="title is-1-mobile">Refresh Your Home</h1></div>
+        </div>
+    </div>
        <div class="columns is-centered" style="margin-top: 2rem">
            @foreach($categories as $category)
               @include('partials.select')
